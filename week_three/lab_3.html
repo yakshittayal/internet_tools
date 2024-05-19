@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      /* Set body height to fill the viewport */
+    }
+
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li {
+      margin-right: 15px;
+    }
+
+    .navbar ul li:last-child {
+      margin-right: 0;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+
+      grid-template-rows: 1fr 1fr;
+
+      gap: 5px;
+      flex: 1;
+
+    }
+
+
+    .grid-item {
+      background-color: #8ca1a5;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .item1-4 {
+      grid-column: 1;
+      grid-row: 1 / 3;
+
+    }
+
+    .item2 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+
+    .item3 {
+      grid-column: 3;
+      grid-row: 1;
+    }
+
+
+    .item5-6 {
+      grid-column: 2 / 4;
+      grid-row: 2;
+      overflow-y: auto;
+      text-align: left;
+    }
+
+    .grid-item.item1-4 img {
+      width: 100%;
+      height: 800px;
+      aspect-ratio: attr(width) / attr(height);
+      object-fit: cover;
+    }
+
+    .grid-item.item2 img {
+
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+
+    }
+
+    .grid-item.item3 img {
+      width: 300px;
+      height: 400px;
+      object-fit: contain;
+    }
+  </style>
+  <style>
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="left-section">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </div>
+    <div class="right-section">
+      <ul>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div class="grid-item item1-4">
+      <img src="image1.jpg">
+    </div>
+    <div class="grid-item item2">
+      <img src="image2.jpg">
+    </div>
+    <div class="grid-item item3">
+      <img src="image3.jpg">
+    </div>
+    <div class="grid-item item5-6">
+      Space exploration, driven by a deep human curiosity about the cosmos, has blossomed into a vast scientific
+      endeavor. We use powerful telescopes to study distant galaxies and peer back in time, while robotic probes venture
+      out into our solar system, analyzing the composition of planets, moons, and asteroids. Human spaceflight has taken
+      us to the Moon, and astronauts continue to conduct groundbreaking research aboard the International Space Station.
+      This pursuit of knowledge has revolutionized our understanding of the universe, revealing not only the existence
+      of countless exoplanets but also the potential for water, and maybe even life, beyond Earth. Space exploration
+      isn't just about scientific discovery though. It fosters international collaboration, pushes the boundaries of
+      technology, and inspires future generations to reach for the stars. The knowledge and innovations gleaned from
+      space exploration have countless applications that improve our lives here on Earth, from weather forecasting and
+      communication satellites to medical treatments and materials science. As we continue to explore the cosmos, we not
+      only expand the map of the universe but also gain a deeper understanding of our own place within it.As we continue
+      to explore the cosmos, we not only expand the map of the universe but also gain a deeper understanding of our own
+      place within it. Who knows what wonders await us on this grand journey of discovery? The future of space
+      exploration is bright, beckoning us with the promise of pushing the frontiers of human knowledge and achievement.
+    </div>
+    <footer>
+      <p>all rights reserved </p>
+    </footer>
+  </div>
+</body>
+
+</html>
