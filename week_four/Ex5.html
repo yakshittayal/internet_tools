@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <script>
+        function oldFunction() 
+        {
+            var msg = "this is an original function ";
+            function newFunction() 
+            {
+                alert(msg);
+            }
+            return newFunction;
+        }
+        const myfunction = oldFunction();
+        myfunction();
+    </script>  
+</body>
+</html>
