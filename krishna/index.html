@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yakshit</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/bar.css">
+  <style>
+    #numberInput {
+      font-size: 2rem;
+      width: 100%;
+      height: 150px; 
+    }
+    #resultScreen {
+      height: 150px; 
+      width: 100%; 
+      font-size: 1.5rem;
+      color: #ffffff;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div>
+      <a
+        class="nav-link"
+        href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+        target="_blank"
+        >HTML5</a
+      >
+      <a
+        class="nav-link"
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        target="_blank"
+        >JavaScript</a
+      >
+      <a
+        class="nav-link"
+        href="https://getbootstrap.com/docs/5.3/getting-started/introduction"
+        target="_blank"
+        >Bootstrap</a
+      >
+    </div>
+    <div class="right-section">
+      <div class="btn-group">
+        <button class="btn btn-primary">Dark</button>
+        <button class="btn btn-primary">Light</button>
+      </div>
+      <button class="btn btn-secondary" type="button">Contact Me</button>
+    </div>
+  </nav>
+  <div class="main-section">
+    <div class="row">
+      <div class="column" style="flex: 1;">
+        <p>factorial calculator </p>
+        <p>n! = 1*2*3....*n</p>
+        <p>eg 5!=120</p>
+      </div>
+      <div class="column" style="flex: 5;">
+        <input type="number" id="numberInput" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="column" style="flex: 1;">
+        <button class="btn btn-primary" style="align-self: flex-end;" onclick="calculateFactorial()">Enter</button>
+      </div>
+      <div class="column" style="flex: 5; background-color: #322d1d;">
+        <div id="resultScreen"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    function calculateFactorial() {
+      var a = parseInt(document.getElementById("numberInput").value);
+      var b = document.getElementById("resultScreen");
+      let fact = 1;
+      for (let i = 2; i <= a; i++) {
+        fact *= i;
+      }
+      b.innerText = `${fact}`;
+    }
+    
+  </script>
+  <footer class="footer">
+    Simple factorial calculator @ 2024
+    <style>
+        .footer {
+            text-align: center;
+            padding: 3px;
+            background-color: rgb(117, 107, 104);
+            color: white;
+        }
+    </style>
+</footer>
+</body>
+</html>
